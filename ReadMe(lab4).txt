@@ -1,0 +1,2 @@
+Running Time Complexity would be (nlogn) due to the splitting of arrays into seperate arrays through the merge sorting algorithm.
+Space Time Complexity would input a 2D array into a singular array, which I believe would be 1 as it became a constant array.
