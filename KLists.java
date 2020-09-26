@@ -47,10 +47,10 @@ public class KLists{
       }
       ++i;
     }
-    while(t1<temp1.length){//copy temp1 into
+    while(t1<temp1.length){//copy temp1 into target
       target[i++]=temp1[t1++];
     }
-    while(t2<temp2.length){
+    while(t2<temp2.length){//copy temp 2 into target
       target[i++]=temp2[t2++];
     }
     return target;
