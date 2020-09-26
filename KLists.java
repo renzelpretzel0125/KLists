@@ -25,15 +25,6 @@ public class KLists{
     }
     return newArr;
   }
-  /*public static double[]mergesort(double[]arr, double []temp1, double[]temp2) {
-    if (arr.length > 1) {
-      double[]temp1= t1;
-      double[]temp2= t2;
-      mergesort(temp1);
-      mergesort(temp2);
-      merge(arr, temp1, temp2);
-    } 
-  }*/
   public static double[]merge(double[]target,double[]temp1,double[]temp2){
     int t1 = 0;
     int t2 = 0;
