@@ -1,7 +1,7 @@
 import java.util.Arrays;
 public class KLists{
   
-  public static double [] mergeKLists(double[][]outerArray){// turn to single array, contains all the merge function
+  public static double [] mergeKLists(double[][]outerArray){// turn to single array, contains the merge function
     double[]newArray= outerArray[0];
     for(int i = 1; i<outerArray.length;i++){
       newArray=merge(newArray,outerArray[i]);
