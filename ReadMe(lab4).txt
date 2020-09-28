@@ -1,2 +1,2 @@
-Running Time Complexity would be (nlogn) due to the splitting of arrays into seperate arrays through the merge sorting algorithm.
+Running Time Complexity would be (3n^2) or O(n^2) due to for loop being n containing merge which is a 3n due to three while loops multiplying with the for loop it is nested in in mergeklist.
 Space Time Complexity would input a 2D array into a singular array, which I believe would be 1 as it became a constant array.

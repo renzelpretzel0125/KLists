@@ -2,21 +2,11 @@ import java.util.Arrays;
 public class KLists{
   
   public static double [] mergeKLists(double[][]outerArray){// turn to single array, contains all the other functions
-    int l = lengthOfArray(outerArray);
-    double[]newArray= new double[l];
+    double[]newArray= outerArray[0];
     for(int i = 1; i<outerArray.length;i++){
-      double[]temp1=getTemp(outerArray[i-1]);
-      double[]temp2=getTemp(outerArray[i]);
-      newArray=merge(newArray,temp1,temp2);
+      newArray=merge(newArray,outerArray[i]);
     }
     return newArray;
-  }
-  public static int lengthOfArray(double[][]outerArray){//finds length to find space for new array
-    int count =0;
-    for(int i = 0; i<outerArray.length;i++){
-      count+=outerArray[i].length;
-    }
-    return count;
   }
   public static double[]getTemp(double[]arr){//creates a temp array for each array withing the 2D array
     double[]newArr=new double[arr.length];
@@ -25,10 +15,11 @@ public class KLists{
     }
     return newArr;
   }
-  public static double[]merge(double[]target,double[]temp1,double[]temp2){
+  public static double[]merge(double[]temp1,double[]temp2){//merges array
     int t1 = 0;
     int t2 = 0;
     int i = 0;
+    double [] target = new double[temp1.length+temp2.length];
     while(t1<temp1.length&&t2<temp2.length){// compare temp1 and temp2
       if(temp1[t1]<temp2[t2]){
         target[i]=temp1[t1++];
@@ -49,7 +40,7 @@ public class KLists{
 
   public static void main(String[]args){
 
-    double[][]KLists = {{1.1, 4.4, 5.5}, {1.1, 3.3, 4.4},{2.2, 6.6}};
+    double[][]KLists = {{1.1, 4.4, 5.5},{1.1, 3.3, 4.4},{2.2, 6.6}};
     double[]newList=mergeKLists(KLists);
     System.out.println(Arrays.toString(newList));
 
